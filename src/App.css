@@ -1,0 +1,234 @@
+/** VARIABLES **/
+:root {
+    /* Colours */
+    --neutral-light-color: white;
+    --dark-color: #11133e;
+    --main-color: #5baeb6;
+    --light-main-color: #99afb1;
+    --dark-main-color: #1c4549;
+    --alive-status-color: #8fc661;
+    --dead-status-color: #c66161;
+    --unkown-status-color: #a5a5a5;
+    --error-color: #bd2828;
+
+    /* Fonts */
+    --main-font: 'Open Sans', sans-serif;
+    --special-font: 'Play', sans-serif;
+
+    /* Effects */
+    --small-shadow: 0 0 5px var(--main-color);
+    --mid-shadow: 0 0 10px var(--main-color);
+    --big-shadow: 0 0 20px var(--main-color);
+}
+
+/** GENERAL LAYOUT **/
+* {
+    box-sizing: border-box;
+    transition: all 100ms ease-in-out;
+}
+
+body, html {
+    background: var(--dark-color);
+    font-size: 16px;
+    margin: 0;
+    font-family: var(--main-font);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+h2 {
+    font-family: var(--special-font);
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3vw;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 5vw;
+}
+
+/** HEADER **/
+header {
+    display: flex;
+    justify-content: center;
+    padding: 5vw;
+}
+
+header img {
+    width: 150px;
+}
+
+/** CHARACTER SECTION **/
+.character-search-field {
+    font-size: 1.1rem;
+    color: var(--neutral-light-color);
+    background: none;
+    padding: 0.7em 1.6em;
+    border: 1px solid var(--main-color);
+    border-radius: 50px;
+    margin-bottom: 2em;
+    box-shadow: inset var(--small-shadow);
+}
+
+.character-search-field:focus {
+    box-shadow: var(--mid-shadow);
+}
+
+.character-search-field::placeholder {
+    color:var(--main-color);
+}
+
+.character-grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.character-grid-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.character-grid-title-container hr {
+    width: 100%;
+    border-color: var(--main-color);
+    box-shadow: var(--small-shadow);
+}
+
+.character-grid-title {
+    color: var(--neutral-light-color);
+    font-size: 1.2rem;
+    text-align: center;
+    text-shadow: var(--small-shadow);
+    min-width:200px;
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3em;
+}
+
+.character-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 1.2em;
+    border: 3px solid var(--main-color);
+    border-radius: 0.5em;
+    background: var(--dark-main-color);
+    color: var(--neutral-light-color);
+    text-align: center;
+    box-shadow: inset var(--big-shadow);
+}
+
+.character-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: -2.5em;
+    box-shadow: var(--small-shadow);
+}
+
+.character-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    font-size: 0.8rem;
+}
+
+.character-status-species {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4em;
+}
+
+.icon-alive, .icon-dead, .icon-unknown {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+}
+
+.icon-alive {
+    background: var(--alive-status-color);
+    content: 'holo';
+}
+
+.icon-dead {
+    background: var(--dead-status-color);
+    content: 'holo';
+}
+
+.icon-unknown {
+    background: var(--unkown-status-color);
+}
+
+.infinite-scroll-component {
+    padding-top: 2em;
+}
+
+.notification {
+    color: var(--neutral-light-color);
+    font-weight: 400;
+    text-align: center;
+    padding: 2em;
+    border: 1px solid var(--neutral-light-color);
+    border-radius: 5px;
+}
+
+.notification.error {
+    background: var(--error-color);
+    border-color: var(--error-color);
+}
+
+@media (min-width: 480px){
+    header img {
+        width: 220px;
+    }
+    
+    .character-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em;
+    }
+
+    .character-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .character-grid-title {
+        min-width: 250px;
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 780px){
+    header img {
+        width: 300px;
+    }
+    
+    .character-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3em;
+    }
+
+    .character-card img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .character-grid-title {
+        min-width: 400px;
+        font-size: 1.6rem;
+    }
+}
