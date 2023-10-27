@@ -21,15 +21,15 @@ Puedes probar aplicación de Rick y Morty App visitando la página de la aplicac
 ## Contacto
 Si tienes alguna pregunta, sugerencia o simplemente quieres ponerte en contacto, no dudes en escribir a designer@imaginario27.com. 
 
-# Documentación 
-## Tecnologías utilizadas
+## Documentación 
+### Tecnologías utilizadas
 - **HTML**: Lenguaje de marcado para la estructura de la página web.
 - **CSS**: Lenguaje de estilos para el diseño de la aplicación.
 - **React**: Biblioteca de JavaScript para construir la interfaz de usuario.
 - **Redux**: Biblioteca de gestión de estado para manejar los datos de la aplicación.
 - **TypeScript**: Superset de JavaScript que proporciona tipado estático para una mejor robustez y desarrollo.
 
-## Estructura de la aplicación 
+### Estructura de la aplicación 
 SRC:
 - App.css
 - App.tsx
@@ -50,26 +50,26 @@ SRC:
     - CharactersSearch.tsx
     - charactersSlice.ts
 
-### /src
+#### /src
 - **App.css**: Archivo de hoja de estilos para la aplicación.
 - **App.tsx**: Archivo principal de la aplicación.
 - **main.tsx**: Punto de entrada principal de la aplicación.
 - **vite-env.d.ts**: Archivo de definición de tipos para Vite (un entorno de desarrollo).
 
-### /app
+#### /app
 - **store.ts**: Este archivo contiene el almacenamiento global de los estados de la aplicación de Redux.
 
-### /assets
+#### /assets
   - **img**: Este subdirectorio contiene imágenes utilizadas en la aplicación.
     - **rick-and-morty.png**: Imagen "Rick and Morty" en formato PNG.
     - **rick-and-morty.svg**: Imagen "Rick and Morty" en formato SVG.
 
-### /components
+#### /components
 Los componentes reutilizables de la aplicación se organizan en este directorio.
 
 - **Header.tsx**: Componente que representa el encabezado de la aplicación.
 
-### /features
+#### /features
 Los directorios dentro de "features" contiene los módulos o características específicas de la aplicación.
 
 - **Character.tsx**: Componente que define la estructura del personaje.
@@ -77,13 +77,13 @@ Los directorios dentro de "features" contiene los módulos o características es
 - **CharactersSearch.tsx**: Componente que permite buscar personajes.
 - **charactersSlice.ts**: Archivo relacionado con la gestión del estado de los personajes y la carga de los datos de API.
    
-## Implementación Local
+### Implementación Local
 Para implementar y ejecutar la aplicación "La Rick y Morty App" en tu entorno local, sigue estos pasos:
 
-### Requisitos Previos
+#### Requisitos Previos
 Asegúrate de tener instalado Node.js en tu sistema. Si no lo tienes, puedes descargarlo desde [el sitio oficial de Node.js](https://nodejs.org/).
 
-### Pasos de Implementación
+#### Pasos de Implementación
 1. **Clona el repositorio**
 Abre una terminal y clona el repositorio de la aplicación desde GitHub:
 
