@@ -58,11 +58,11 @@ h2 {
 header {
     display: flex;
     justify-content: center;
-    padding: 5vw;
+    padding: 10vw;
 }
 
 header img {
-    width: 150px;
+    width: 220px;
 }
 
 /** CHARACTER SECTION **/
@@ -192,8 +192,8 @@ header img {
 }
 
 @media (min-width: 480px){
-    header img {
-        width: 220px;
+    header {
+        padding: 5vw;
     }
     
     .character-grid {
