@@ -57,7 +57,7 @@ const CharacterGrid: React.FC = () => {
 
     // Render the component's JSX structure
     return (
-        <div className="character-grid-container">
+        <div id="character-grid-container" className="character-grid-container">
         {/* Display the character search input component */}
         <CharacterSearch searchTerm={searchTerm} onSearchChange={setSearchTerm} />
         <div className="character-grid-title-container">

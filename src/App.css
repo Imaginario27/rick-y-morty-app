@@ -10,6 +10,8 @@
     --dead-status-color: #c66161;
     --unkown-status-color: #a5a5a5;
     --error-color: #bd2828;
+    --go-to-top-btn-color: #8fc661;
+    --go-to-top-btn-hover-color: #628942;
 
     /* Fonts */
     --main-font: 'Open Sans', sans-serif;
@@ -52,6 +54,7 @@ h2 {
     max-width: 1000px;
     width: 100%;
     padding: 0 5vw;
+    position:relative;
 }
 
 /** HEADER **/
@@ -191,6 +194,35 @@ header img {
     border-color: var(--error-color);
 }
 
+#go-to-top-btn {
+    background: var(--go-to-top-btn-color);
+    width: 40px;
+    height: 40px;
+    color: var(--neutral-light-color);
+    border: none;
+    border-radius: 50%;
+    box-shadow: var(--small-shadow);
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: "transform 0.3s",
+  }
+  
+  #go-to-top-btn:hover {
+    background: var(--go-to-top-btn-hover-color);
+    cursor: pointer;
+  }
+  
+  #go-to-top-btn img {
+    width: 12px;
+    height: 12px;
+  }
+  
+/** Mediaqueries *******/
 @media (min-width: 480px){
     header {
         padding: 5vw;
@@ -209,6 +241,11 @@ header img {
     .character-grid-title {
         min-width: 250px;
         font-size: 1.4rem;
+    }
+
+    #go-to-top-btn {
+        bottom: 20px;
+        right: 20px;
     }
 }
 
@@ -230,5 +267,10 @@ header img {
     .character-grid-title {
         min-width: 400px;
         font-size: 1.6rem;
+    }
+
+    #go-to-top-btn {
+        bottom: 30px;
+        right: 30px;
     }
 }
