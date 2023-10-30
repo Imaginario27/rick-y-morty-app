@@ -63,7 +63,7 @@ const charactersSlice = createSlice({
         builder
             .addCase(fetchCharacters.fulfilled, (state, action) => {
                 // Set characters data and reset loading and error
-                state.characters = action.payload;
+                state.characters.push(...action.payload);
                 state.loading = false;
                 state.error = null;
             })

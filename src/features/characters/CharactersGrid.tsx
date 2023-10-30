@@ -30,7 +30,7 @@ const CharacterGrid: React.FC = () => {
         // Create a set of character IDs to check for duplicates
         const existingCharacterIds = allCharacters.map((character) => character.id);
         const newCharacters = characters.filter(
-        (character) => !existingCharacterIds.includes(character.id)
+            (character) => !existingCharacterIds.includes(character.id)
         );
 
         // Append newly loaded characters to the existing array
@@ -80,7 +80,7 @@ const CharacterGrid: React.FC = () => {
             ) : null // If searchTerm is not empty, don't render anything
             }
         >
-            {filteredCharactersWithRandomKeys.length === 0 ? (
+            {filteredCharactersWithRandomKeys.length === 0 && searchTerm ? (
             <h4 className="notification">No se ha encontrado ningún personaje...</h4>
             ) : (
             <div className="character-grid">
